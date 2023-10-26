@@ -349,15 +349,15 @@
                 var empresa = prompt("Qual o nome da empresa?");
                 var valor_Aparelho = parseFloat(prompt("Qual o valor por aparelho?"));
                 var quant_Aparelhos = parseInt(prompt("Qual a quantidade de aparelhos?"));
-                var Desconto = parseFloat(prompt("Qual a porcentagem de desconto?"));
+                var desconto = parseFloat(prompt("Qual a porcentagem de desconto?"));
                 var minimo_Desconto = parseInt(prompt("Qual o número mínimo de aparelhos para conseguir o desconto?"));
 
-                if (isNaN(valor_Aparelho) || isNaN(quant_Aparelhos) || isNaN(Desconto) || isNaN(minimo_Desconto)) {
+                if (isNaN(valor_Aparelho) || isNaN(quant_Aparelhos) || isNaN(desconto) || isNaN(minimo_Desconto)) {
                     alert("Digite um número válido para todas as entradas.");
                     continue;
                 }
 
-                var totalCalculado = calcularTotalServico(empresa, valor_Aparelho, quant_Aparelhos, Desconto, minimo_Desconto);
+                var totalCalculado = calcularTotalServico(empresa, valor_Aparelho, quant_Aparelhos, desconto, minimo_Desconto);
                 empresas.push({ nome: empresa, valor: totalCalculado });
                 alert("O serviço de " + empresa + " custará R$ " + totalCalculado.toFixed(2));
 
